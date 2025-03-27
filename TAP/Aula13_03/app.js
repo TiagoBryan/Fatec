@@ -14,6 +14,16 @@ app.get("/", function(req, res){
     res.render("primeira_pagina")
 })
 
+app.get("/consulta", async function (req, res) {
+    try {
+        const agendamentos = await post.findAll();
+        res.render("segunda_pagina", { agendamentos: agendamentos.map(a => a.toJSON()) });
+    } catch (error) {
+        res.send("Erro ao buscar agendamentos: " + error);
+    }
+});
+
+
 app.post("/cadastrar", function(req, res){
     post.create({
         nome: req.body.nome,
