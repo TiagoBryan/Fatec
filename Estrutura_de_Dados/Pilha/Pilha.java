@@ -11,14 +11,12 @@ package com.mycompany.pilha;
 import javax.swing.JOptionPane;
 
 public class Pilha {
-    int inicio;
     int topo = -1;
     int tamanho;
     int qtdeElementos = 0;
     int p[];
 
     public Pilha() {
-        inicio = 0;
         tamanho = 10;
         p = new int[tamanho];
         qtdeElementos = 0;
