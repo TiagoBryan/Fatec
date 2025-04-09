@@ -13,13 +13,12 @@ import javax.swing.JOptionPane;
 public class Pilha {
     int inicio;
     int topo = -1;
-    int fim;
     int tamanho;
     int qtdeElementos = 0;
     int p[];
 
     public Pilha() {
-        inicio = fim = -1;
+        inicio = -1;
         tamanho = 10;
         p = new int[tamanho];
         qtdeElementos = 0;
