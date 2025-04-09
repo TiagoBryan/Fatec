@@ -18,7 +18,7 @@ public class Pilha {
     int p[];
 
     public Pilha() {
-        inicio = -1;
+        inicio = 0;
         tamanho = 10;
         p = new int[tamanho];
         qtdeElementos = 0;
@@ -40,9 +40,7 @@ public class Pilha {
 
     public void empilha(int e){
         if (!estaCheia()){
-            if (inicio == -1){
-                inicio = 0;
-            }
+           
             topo++;
             p[topo] = e;
             qtdeElementos++;
